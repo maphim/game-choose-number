@@ -25,10 +25,10 @@
         }
 
         .a4-paper {
-            width: 595px;
-            height: 842px;
-            max-width: 595px;
-            max-height: 842px;
+            height: 100vh;
+            width: calc(100vw * (595 / 842));
+            max-height: 100vh;
+            max-width: calc(100vw * (595 / 842));
             /* background-color: #FFEB3B; */
         }
 
@@ -71,7 +71,7 @@
 <body>
     <div class="container-fluid py-5">
         <div class="a4-paper mx-auto"></div>
-        <div class="a4-paper download"></div>
+        <!-- <div class="a4-paper download"></div> -->
     </div>
 
     <script>
