@@ -34,42 +34,40 @@
         .block-number {
             width: calc(595px/5); /* 5* 20 = 100*/
             height: calc(842px/20);
-            border: 1px dashed red;
+            /* border: 1px dashed red; */
             display: inline-block;
             text-decoration: underline;
-            text-align: left;
-            padding-left: 5px;
         }
 
         .f1 {
-            font-size: 12px;
+            font-size: 17px;
             font-weight: 100;
         }
 
         .f2 {
-            font-size: 14px;
+            font-size: 19px;
             font-weight: 200;
         }
 
         .f3 {
-            font-size: 16px;
+            font-size: 21px;
             font-weight: 300;
         }
 
         .f4 {
-            font-size: 18px;
+            font-size: 23px;
             font-weight: 400;
         }
 
         .f5 {
-            font-size: 20px;
+            font-size: 25px;
             font-weight: 700;
         }
     </style>
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid py-5">
         <div class="a4-paper mx-auto"></div>
     </div>
 
@@ -94,11 +92,13 @@
             var randomNumber = LIST_NUMBER.getRandom();
             var degRandom = Math.floor(Math.random() * 180);
             var fontRandom = Math.floor(Math.random() * LIST_FONTS.length);
+            var paddingRandom = Math.floor(Math.random() * 25);
             var numberBlock = document.createElement("span");
 
             numberBlock.innerText = randomNumber;
             numberBlock.classList = "block-number block-number-" + randomNumber + ' ' + LIST_FONTS[fontRandom];
             numberBlock.style.transform = 'rotate(' + degRandom + 'deg)';
+            numberBlock.style.paddingLeft = paddingRandom;
             document.querySelector(".a4-paper").appendChild(numberBlock);
         }
     </script>
