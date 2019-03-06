@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Roboto" rel="stylesheet">
+    <script src="http://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 
     <style>
         .Roboto {
@@ -32,7 +33,8 @@
         }
 
         .block-number {
-            width: calc(595px/5); /* 5* 20 = 100*/
+            width: calc(595px/5);
+            /* 5* 20 = 100*/
             height: calc(842px/20);
             /* border: 1px dashed red; */
             display: inline-block;
@@ -69,6 +71,7 @@
 <body>
     <div class="container-fluid py-5">
         <div class="a4-paper mx-auto"></div>
+        <div class="a4-paper download"></div>
     </div>
 
     <script>
@@ -101,5 +104,9 @@
             numberBlock.style.paddingLeft = paddingRandom;
             document.querySelector(".a4-paper").appendChild(numberBlock);
         }
+
+        // html2canvas(document.querySelector("body")).then(canvas => {
+        //     $(".download").html(canvas)
+        // });
     </script>
 </body>
